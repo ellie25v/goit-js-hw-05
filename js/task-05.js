@@ -1,15 +1,15 @@
 'use strict';
 
 class Car {
+    static getSpecs(car) {
+        console.log(`maxSpeed: ${car._maxSpeed}, speed: ${car._speed}, isOn: ${car._isOn}, distance: ${car._distance}, price: ${car._price}`);
+    }
     constructor(car) {
         this._speed = 0;
         this._price = car.price;
         this._maxSpeed = car.maxSpeed;
         this._isOn = false;
         this._distance = 0;
-    }
-    static getSpecs(car) {
-        console.log(`maxSpeed: ${car._maxSpeed}, speed: ${car._speed}, isOn: ${car._isOn}, distance: ${car._distance}, price: ${car._price}`);
     }
     get price() {
         return this._price;
